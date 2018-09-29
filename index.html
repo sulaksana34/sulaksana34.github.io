@@ -1,0 +1,581 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <title>Web Portfolio</title>
+    <link rel="icon" href="images/Joni.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/socicon.css" type="text/css">
+    <script src="script/jquery.min.js" type="text/javascript"></script>
+    <script src="script/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<style>
+    body,
+    html {
+        height: 100%;
+        color: #777777;
+    }
+
+    #myPage {
+        height: 100%;
+        margin-right: -17px;
+        overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .bgimg-1 {
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(images/elem-mt.jpg);
+        min-height: 100%;
+    }
+
+    .caption {
+        font-family: 'Montserrat Light', sans-serif;
+        position: absolute;
+        left: 0;
+        top: 16%;
+        width: 100%;
+        text-align: center;
+        color: #000000
+    }
+
+    .caption span.border {
+        font-family: 'Open Sans';
+        transition: all 0.25s;
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        color: #FFFFFF;
+        padding: 12px;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .caption span.border:hover {
+        border-color: #9B8867;
+        background-color: #9B8867;
+        color: #FFFFFF;
+        transition: all 0.25s;
+    }
+
+    span.border:hover span.myIcon {
+        transform: rotate(90deg);
+        transition: all 0.25s;
+    }
+
+    .caption a {
+        text-decoration: none;
+    }
+
+    .main-text {
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+
+    .myName {
+        font-size: 42px;
+        font-weight: 550;
+        color: #BFE8EA;
+    }
+
+    .myIcon {
+        transition: all 0.25s;
+    }
+
+    .navbar-brand {
+        text-decoration: none;
+    }
+
+    .nav-link {
+        display: block;
+        transition: all 0.2s;
+    }
+
+    .nav-link:hover {
+        transition: all 0.25s;
+        color: #BFE8EA !important;
+    }
+
+    .nav-item {
+        padding-left: 20px;
+    }
+
+    .header-bar {
+        width: 60px;
+        height: 4px;
+        background-color: #444649;
+        display: inline-block;
+    }
+
+    #about {
+        margin: 50px 0 125px 0px;
+    }
+
+    #about div span {
+        margin-top: 40px;
+        font-size: 70px;
+    }
+
+    .bar {
+        display: inline-block;
+        background-color: gray;
+        width: 550px;
+        height: 30px;
+        margin-bottom: 19px;
+        border-radius: 3px;
+    }
+
+    .bar .fill {
+        float: left;
+        background-color: #BFE8EA !important;
+        height: 30px;
+    }
+
+    .bar .fill .tag {
+        display: block !important;
+        width: 150px;
+        background-color: #9B8867;
+        color: white;
+    }
+
+    @media screen and (max-width: 480px) {
+        .bar {
+            display: inline-block;
+            background-color: gray;
+            width: 260px;
+            height: 20px;
+            margin-bottom: 15px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .bar .fill {
+            float: left;
+            background-color: #BFE8EA !important;
+            height: 20px;
+        }
+
+        .bar .fill .tag {
+            display: block !important;
+            width: 80px;
+            background-color: #9B8867;
+            color: white;
+        }
+    }
+
+    .mySkill {
+        transition: all 0.2s;
+        opacity: 0.8;
+        padding: 0 50px;
+        width: 300px;
+    }
+
+    .mySkill:hover {
+        transition: all 0.2s;
+        opacity: 1.0;
+        color: #9B8867;
+    }
+
+    #contact {
+        /*background-color: #263130;*/
+        background-image: url(images/elem-nt.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #contact footer {
+        padding-top: 80px;
+    }
+
+    .icon {
+        width: 55px;
+        height: 55px;
+        position: relative;
+        text-align: center;
+        margin: 0 15px;
+        color: #FFFFFF;
+        font-size: 18pt;
+        vertical-align: middle;
+        transition: all 0.25s;
+    }
+
+    @media screen and (max-width: 480px) {
+        .icon {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .myContact {
+        padding-bottom: 0px;
+    }
+
+    .facebook:hover {
+        color: #4267B2;
+    }
+
+    .instagram:hover {
+        color: #BAAA90;
+    }
+
+    .line:hover {
+        color: #00B900;
+    }
+
+    .steam:hover {
+        color: #126EA1;
+    }
+
+    .socialIcon {
+        width: 55px;
+        height: 55px;
+        border-radius: 3px 0 0 3px;
+        border: solid #FFFFFF;
+        border-width: 0 2px 0 0;
+        border-right: 0px;
+    }
+
+    .socialText {
+        width: 255px;
+        height: 30px;
+        border: solid #FFFFFF;
+        border-width: 0 0 0 2px;
+        border-radius: 0 3px 3px 0;
+        color: white;
+        justify-content: flex-start;
+        flex-direction: row;
+        padding-left: 20px;
+        transition: all 0.25s;
+        font-family: 'Montserrat Light', sans-serif;
+        font-size: 15px;
+    }
+
+    .socialText:hover {
+        transition: all 0.25;
+        cursor: default;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .sticky+#about {
+        padding-top: 60px;
+    }
+
+    #myNav {
+        z-index: 1;
+    }
+
+    .slideanim-r {
+        visibility: hidden;
+    }
+
+    .slide-r {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1.5s;
+        -webkit-animation-duration: 1.5s;
+        visibility: visible;
+    }
+
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+</style>
+
+<body id="myPage" data-spy="scroll" data-target="#myNav" data-offset="80">
+    <div id="home" class="bgimg-1">
+        <div class="caption">
+            <div class="main-text">
+                <h1>Hello, I'm <span class="myName">Agung Sulaksana</span>.</h1>
+                <h2 style="margin-top: -8px;">I'm a front-end web developer.</h2>
+            </div>
+            <a href="#myNav"><span class="border">View my works <span class="myIcon fa fa-arrow-right"></span></span></a>
+        </div>
+    </div>
+
+    <nav id="myNav" class="navbar navbar-expand-lg navbar-dark" style="background-color: #0E1410; border-bottom: 3px solid #BFE8EA;">
+        <span class="navbar-brand"></span>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact-target">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container-fluid text-center">
+            <h2 style="font-weight:605;">ABOUT</h2>
+            <div class="header-bar"></div>
+        </div>
+        <div class="row flex slideanim-r" style="flex-direction: row;">
+            <div class="text-center mySkill">
+                <span class="fa fa-paint-brush"></span><br><br>
+                <h4>Graphic Design</h4>
+                <p style="inline-block;">I love graphic design. Design itself is a part of me. On-time-delivery project is my biggest priority.</p>
+            </div>
+            <div class="text-center mySkill">
+                <span class="fa fa-code"></span><br><br>
+                <h4>Web Design</h4>
+                <p style="inline-block;">In web design, every magic can be real. Just put this and add a little this, plus a bit of that. Voila. A good-looking web design is ready to be served.</p>
+            </div>
+            <div class="text-center mySkill">
+                <span class="fa fa-film"></span><br><br>
+                <h4>Motion Design</h4>
+                <p style="inline-block;">Well, not only motion graphic. I also do video editing as well. Hei, have you ever thought combining both?</p>
+            </div>
+            <div class="text-center mySkill">
+                <span class="fa fa-gamepad"></span><br><br>
+                <h4>Play Games</h4>
+                <p style="display: inline-block;">This is a very must-have skill for every human. I'm not pro at this, but skill is skill after all.</p>
+            </div>
+        </div>
+        <div class="row slideanim-r" style="margin-top: 50px;">
+            <div class="col-sm-6 text-center">
+                <img src="images/Joni.png" width="200px" height="200px"><br><br>
+                <h2 style="font-weight: 450;">Who Am I?</h2>
+                <p style="padding: 0px 50px; display: inline-block;">Hi, there! My name is Agung Sulaksana, be free to call me Agung. I'm an 18 years old boy who has passion in design world. I live in Bandung, one of the biggest city in Indonesia. Currently working at PT. Mitra Sinerji Teknoindo as a junior visual designer. I was graduated at 4th Bandung Vocational Highschool, as a Multimedia alumnus. Other than design, I'm also capable of video/photo editing and photography.</p>
+            </div>
+            <div class="col-sm-6 text-center">
+                <div class="bar">
+                    <div class="bar fill" style="width: 90%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">CorelDRAW</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">95%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 75%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">Illustrator</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">80%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 80%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">Photoshop</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">85%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 85%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">After Effects</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">90%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 80%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">Adobe Flash</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">85%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 65%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">HTML & CSS</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">70%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 80%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">Ms. Office</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">85%</p>
+                </div>
+                <div class="bar">
+                    <div class="bar fill" style="width: 70%;">
+                        <div class="bar tag">
+                            <p style="padding-top: 3px;">Photography</p>
+                        </div>
+                    </div>
+                    <p style="color: white; float: right; padding-right: 5px; padding-top: 3px;">75%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="text-center">
+        <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="80" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+            <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white" stroke-width="3"></path>
+        </svg>
+        <h2 id="contact-target" style="font-weight:605; color: #FFFFFF; margin-top: 125px;">CONTACT</h2>
+        <div class="header-bar" style="background-color: #FFFFFF; width: 85px;"></div>
+        <br><br>
+        <p class="slideanim-r" style="color: #FFFFFF;">Get in touch:</p>
+        <div class="slideanim-r row flex social" style="flex-direction: row; margin-bottom: 20px; margin-top: 50px;">
+            <div class="socialIcon flex">
+                <span class="fa fa-phone" style="color: white; font-size: 25px;"></span>
+            </div>
+            <span class="socialText flex">+62 899-6867-174</span>
+        </div>
+        <div class="slideanim-r row flex social" style="flex-direction: row; margin-bottom: 20px;">
+            <div class="socialIcon flex">
+                <span class="fa fa-envelope" style="color: white; font-size: 25px;"></span>
+            </div>
+            <span class="socialText flex">sulaksana34@gmail.com</span>
+        </div>
+        <div class="slideanim-r row flex social" style="flex-direction: row; margin-bottom: 30px;">
+            <div class="socialIcon flex">
+                <span class="fa fa-map-marker" style="color: white; font-size: 25px;"></span>
+            </div>
+            <span class="socialText flex">Jl. Cijawura Hilir No. 73</span>
+        </div>
+        <div class="slideanim-r row text-center flex myContact" style="flex-direction: row;">
+            <a href="https://www.facebook.com/agung.sulaksana.71" target="_blank">
+                <span class="icon flex facebook">
+                    <i class="fa fa-facebook"></i>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/sulaksana34" target="_blank">
+                <span class="icon flex instagram">
+                    <i class="fa fa-instagram"></i>
+                </span>
+            </a>
+            <a href="http://line.me/ti/p/sulaksana34" target="_blank">
+                <span class="icon flex line">
+                    <i class="socicon-line"></i>
+                </span>
+            </a>
+            <a href="https://steamcommunity.com/id/joni-dizzle" target="_blank">
+                <span class="icon flex steam">
+                    <i class="socicon-steam"></i>
+                </span>
+            </a>
+        </div>
+        <footer class="container flex" style="color: #FFFFFF; border-radius: 0; background-color: transparent;">
+            <p style="font-size: 14px;">Copyright (c) 2018 Agung Sulaksana.</p>
+        </footer>
+    </section>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".navbar a, .caption a, footer a[href='#myPage']").on('click', function(event) {
+            if (this.hash !== "100") {
+                event.preventDefault();
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function() {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+
+    window.onscroll = function() {
+        myFunction()
+        $(".slideanim-r").each(function() {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 650) {
+                $(this).addClass("slide-r");
+            }
+        });
+        $(".slideanim-t").each(function() {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 650) {
+                $(this).addClass("slide-t");
+            }
+        });
+    };
+    var navbar = document.getElementById("myNav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+</script>
+
+</HTML>
